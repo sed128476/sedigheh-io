@@ -1,7 +1,8 @@
 .body-backGr{
     background: burlywood;
+     color:blue;
 }
 h1 {
-    background-color: whitesmoke; 
+    background-color: rgb(245, 245, 245); 
     color: #94b60de4;
 }
