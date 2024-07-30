@@ -1,6 +1,8 @@
 .body-backGr{
-    background: burlywood;
-     color:rgb(244, 255, 205);
+    background: rgba(222, 184, 135, 0.553);
+     color:rgba(27, 5, 5, 0.152);
+     border-style:ridge;
+     border-width: 10px;
 }
 h1 {
     font-family: Sofia;
@@ -9,25 +11,29 @@ h1 {
     color: #94b60de4;
     font-size: x-large;
     font-weight: 300;
-    padding: 25px;
-    margin: 25px;
     border:whitesmoke groove ;
+    margin-left: 200px;
+    margin-right: 200px;
 
 }
 
 section {
     font-family: 'Open Sans', serif;
-    background-color: #4a4a4a;
-    color: rgb(244, 255, 205);
+    color: black;
     text-align: center;
-    padding: 25px 0;
-    margin-top: 25px; 
+    padding: 2px 0;
+    margin: 2px; 
 
 }
 .section-experience{
     font-family: 'Open Sans', serif;
+    text-align: center;
     color:cornflowerblue;
     border:aquamarine ;
-    border-style:dashed;
-    border-width: 6ch;
+    border-style:groove;
+    border-width: 1ch;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
