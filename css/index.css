@@ -1,14 +1,26 @@
 .body-backGr{
     background: burlywood;
-     color:blue;
+     color:rgb(244, 255, 205);
 }
 h1 {
+    font-family: Sofia;
+    text-align: center;
     background-color: rgb(245, 245, 245); 
     color: #94b60de4;
-}
-about{
+    font-size: x-large;
+    font-weight: 300;
+    padding: 25px;
     margin: 25px;
+    border:whitesmoke groove ;
+
 }
-body{
-    font-family:tahoma;
-   }
+
+section {
+    font-family: 'Open Sans', serif;
+    background-color: #4a4a4a;
+    color: rgb(244, 255, 205);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 25px; 
+
+}
