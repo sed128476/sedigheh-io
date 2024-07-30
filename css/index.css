@@ -24,3 +24,10 @@ section {
     margin-top: 25px; 
 
 }
+.section-experience{
+    font-family: 'Open Sans', serif;
+    color:cornflowerblue;
+    border:aquamarine ;
+    border-style:dashed;
+    border-width: 6ch;
+}
