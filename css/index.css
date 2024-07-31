@@ -39,7 +39,7 @@ section {
 }
  
 #profile-picture{
-    border-radius: 50%;
+    border-radius: 25%;
     margin: 1em;
     width: 30vw;
     border-color: azure;
