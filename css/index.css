@@ -1,0 +1,48 @@
+.body-backGr{
+    background: rgba(222, 184, 135, 0.553);
+     color:rgba(27, 5, 5, 0.152);
+     border-style:ridge;
+     border-width: 10px;
+}
+h1 {
+    font-family: Sofia;
+    text-align: center;
+    background-color: rgb(245, 245, 245); 
+    color: #94b60de4;
+    font-size: x-large;
+    font-weight: 300;
+    border:whitesmoke groove ;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+section {
+    font-family: 'Open Sans', serif;
+    color: black;
+    text-align: center;
+    padding: 2px 0;
+    margin: 2px; 
+
+}
+.section-experience{
+    font-family: 'Open Sans', serif;
+    text-align: center;
+    color:cornflowerblue;
+    border:aquamarine ;
+    border-style:groove;
+    border-width: 1ch;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+ 
+#profile-picture{
+    border-radius: 25%;
+    margin: 1em;
+    width: 30vw;
+    border-color: azure;
+    border-width: 30div;
+    border-style: groove;
+}
