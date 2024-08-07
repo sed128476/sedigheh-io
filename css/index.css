@@ -4,6 +4,18 @@
      border-style:ridge;
      border-width: 10px;
 }
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(114, 134, 250);
+    border-style: dotted;
+    text-align:center;
+    padding: 3px 2px 1px 2px;
+    margin-left:250px ;
+    margin-right:250px;
+    text-align:center;
+  }
+  
 h1 {
     font-family: Sofia;
     text-align: center;
@@ -25,6 +37,7 @@ section {
     margin: 2px; 
 
 }
+
 .section-experience{
     font-family: 'Open Sans', serif;
     text-align: center;
@@ -32,11 +45,27 @@ section {
     border:aquamarine ;
     border-style:groove;
     border-width: 1ch;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-left: 250px;
-    margin-right: 250px;
+      
 }
+
+#experience ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500px;
+  margin: 0 100px;
+  padding: 0 20px;
+  font-size: 1em;
+  color:#ff5cb0;
+  list-style: none;
+}
+
+#experience ul li{
+        border: 2px solid red;
+        margin: 5px;
+        
+}
+
  
 #profile-picture{
     border-radius: 25%;
@@ -46,3 +75,33 @@ section {
     border-width: 30div;
     border-style: groove;
 }
+#navi-bar ul{
+    display: flex;
+    margin: 0 20px;
+}
+
+#navi-bar ul li {
+    width: 5em;
+    height: 5em;
+    border-radius: 5%;
+    margin: 1em ;
+    padding: 2em;
+    background-color:aliceblue;
+}
+
+#connect ul {
+ display: flex;
+ flex-direction: row;
+ gap: 2em;
+ list-style: none;
+}
+#connect ul li{
+    width: 10em;
+    height: 5em;
+    background-color: rgb(44, 102, 152);
+    border-radius: 10%;
+    margin: 1em;
+    padding: 2em;
+}
+  
+
