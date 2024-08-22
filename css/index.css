@@ -109,3 +109,18 @@ img{
     background:blue;
     
 }
+
+body {
+    margin: 24px;
+  }
+  
+  @media (min-width: 400px) {
+    body {
+      background:azure;
+    }
+  }
+  @media (min-width: 650px) {
+    body {
+      background:lemonchiffon;
+    }
+  }
