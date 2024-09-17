@@ -1,3 +1,8 @@
+//create fetch
+const username = "sed128476";
+const apiurl = `https://api.github.com/users/${username}/repos`;
+const projectSection = document.getElementById('Projects');
+let   projectList    = document.createElement('ul');
 const today  = new Date();
 const date1 = today.getFullYear();
 const footer = document.createElement('footer');
@@ -30,6 +35,36 @@ console.log(ul2);
  let messageSection = document.getElementById('list-message');
  let messageList = messageSection.querySelector('ul');
  messageSection.hidden =true;
+
+
+
+console.log(apiurl);
+ fetch(apiurl)
+ .then(response => {
+   if (!response.ok) {
+     throw new Error('Request failed');
+   }
+   return response.text(); // Parse the response as JSON
+ })
+ .then(data => {
+    console.log(data); // Do something with the data
+    const repositories = json.parse(data);
+    console.log(repositories);
+    projectSection.appendChild(projectList);
+    for(let repository of repositories){
+    let project = document.createElement('li');
+    project.innerText = (repository.name)[0];
+    projectList.appendChild(project);
+    
+  }
+ })
+ .catch(error => {
+   console.log('An error occurred:', error);
+ });
+
+ 
+
+
 
  document.querySelector('#message-form').addEventListener('submit' ,
    (event) => {
