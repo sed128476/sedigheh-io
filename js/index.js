@@ -5,7 +5,7 @@ const body1 = document.querySelector('body');
 console.log(footer1);
 body.appendChild(footer1);
 const copyright1 = document.createElement('div')
-copyright1.innerHTML = `<strong>Sedigheh  &#169 ${date1} &#169</strong>` 
+copyright1.innerHTML = `<strong>Sedigheh  &#169 ${date2} &#169</strong>` 
 footer.appendChild(copyright1);
 const spanDelete = `<span class="delete">Remove</span>`;
 const spanEdit = `<span class="edit">Edit</span>`;
