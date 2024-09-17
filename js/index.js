@@ -3,7 +3,7 @@ const date2 = today1.getFullYear();
 const footer1 = document.createElement('footer');
 const body1 = document.querySelector('body');
 console.log(footer1);
-body.appendChild(footer1);
+body1.appendChild(footer1);
 const copyright1 = document.createElement('div')
 copyright1.innerHTML = `<strong>Sedigheh  &#169 ${date2} &#169</strong>` 
 footer.appendChild(copyright1);
