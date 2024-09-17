@@ -1,4 +1,12 @@
-
+const today  = new Date();
+const date1 = today.getFullYear();
+const footer = document.createElement('footer');
+const body = document.querySelector('body');
+console.log(footer);
+body.appendChild(footer);
+const copyright = document.createElement('div')
+copyright.innerHTML = `<strong>Sedigheh  &#169 ${date1} &#169</strong>` 
+footer.appendChild(copyright);
 const spanDelete = `<span class="delete">Remove</span>`;
 const spanEdit = `<span class="edit">Edit</span>`;
 
