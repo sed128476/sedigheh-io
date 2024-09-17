@@ -110,6 +110,70 @@ img{
     
 }
 
+.message-form{
+    display: flex;
+    text-align:left;
+    color:#212614;
+    flex-direction: column;
+    width: 90%;
+    padding: auto 0.8rem;
+    margin-top: 3rem;
+    margin-left: 0.1rem;
+}
+
+.message-section{
+    background-color: thistle;
+    color: #fff;
+    width: 60%;
+    border: 3px solid;
+    margin-left: 1rem ;
+
+}
+
+
+.key-submit{
+    width: 50px;
+    background-color:plum;
+    align-self:flex-end;
+}
+.key-submit:hover{
+    background-color: blueviolet;
+    color:#212614;
+}
+.delete{
+    float: left;
+    background: #9361bf;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+#hide{
+    padding: 20px 35px 20px 0;
+}
+#hide label{
+    padding: 0 10px;
+}
+.delete:hover{
+    background: #333;
+}
+
+.list-message{
+    background-color:ghostwhite;
+    display: flex;
+    text-align:left;
+    color:#212614;
+    flex-direction: column;
+    width: 90%;
+    border: 3px solid;
+    padding: auto 0.8rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+
+
 body {
     margin: 24px;
   }
