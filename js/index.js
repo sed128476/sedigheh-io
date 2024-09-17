@@ -40,7 +40,7 @@ console.log(ul2);
           let message = event.target.usersMessage.value;
           let objuser = { usersName: name, usersEmail: email, usersMessage: message};
           console.log(objuser);
-          const content1 = ` <a href="mailto:${item.email} ">  ${item.name}  </a>wrote: ${item.message}  `;
+          const content1 = ` <a href="mailto:${email} ">  ${name}  </a> wrote: ${message}  `;
           spanName.textContent = content1;
           console.log(spanName);
           li.appendChild(spanName);
