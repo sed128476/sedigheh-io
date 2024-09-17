@@ -1,5 +1,5 @@
 
-const today  = new Date();
+
 const date1 = today.getFullYear();
 const footer = document.createElement('footer');
 const body = document.querySelector('body');
