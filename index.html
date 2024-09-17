@@ -16,7 +16,7 @@
      <main   class="container">
             <header>
                    <h1 class="subj" >
-                     Lesson-13 Traveling Through the <span> DOM </span>
+                     Lesson-14 Traveling Through the <span> DOM </span>
                      </h1>
               <div class="namenav">
 
@@ -81,6 +81,52 @@
             </section>
 
      </main>
+     <section  class="message-section">
+      <h2>LEAVE A MEESAGE</h2>
+      <form   name="leave-message" id="message-form" class="message-form">
+          <div >
+           <label for="usersName" >UserName:</label>
+           <input id="usersName"  name="usersName"   type="text" placeholder="Name" required="true">
+          </div>
+          <br>
+          
+           <div>
+             <label  for="usersEmail">Email:</label>
+             <input type="email" name="usersEmail" id="usersEmail" placeholder="email"  required="true">
+           </div>
+           <br>
+           <div>
+             <label for="usersMessage">Message:</label>
+             <textarea  name="usersMessage" id="usersMessage" required="true"></textarea>
+           </div>
+            <br>
+            <button type="submit" value="submit" name="submit" class="key-submit">submit</button>
+            <br>
+            
+            <div style="margin-top:100px"></div>
+      </form>
+      <form id="hide">
+           <label>Hide </label>
+           <input type="checkbox"/>
+      </form>    
+ 
+   </section>
+   <!-- Table -->
+ </section>
+ <section id="list-message" class="list-message">
+   <div style="margin-top:10px"></div>
+     <h2>Message</h2>
+     <ul id="messages">
+
+       
+     </ul>
+ </section>
+   
+
+   <script src="./js/index.js"></script> 
+   <div style="margin-top:500px"></div>
+
+
      <script src="./js/index.js"></script> 
 </body>
 </html>
