@@ -47,14 +47,16 @@ console.log(apiurl);
    return response.text(); // Parse the response as JSON
  })
  .then(data => {
-    console.log(data); // Do something with the data
-    const repositories = json.parse(data);
+    const repositories = JSON.parse(data);  // Do something with the data
     console.log(repositories);
     projectSection.appendChild(projectList);
+    const i = 0;
     for(let repository of repositories){
-    let project = document.createElement('li');
-    project.innerText = (repository.name)[0];
-    projectList.appendChild(project);
+
+          console.log(repository);
+          let project = document.createElement('li');
+          project.innerText = (repository.name);
+          projectList.appendChild(project);
     
   }
  })
