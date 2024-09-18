@@ -1,4 +1,18 @@
-
+/*create fetch  */
+const username = "sed128476";
+const apiurl = `https://api.github.com/users/${username}/repos`;
+const projectSection = document.getElementById('Projects');
+let   projectList    = document.createElement('ul');
+      projectList.className = 'project';
+const today  = new Date();
+const date1 = today.getFullYear();
+const footer = document.createElement('footer');
+const body = document.querySelector('body');
+console.log(footer);
+body.appendChild(footer);
+const copyright = document.createElement('div')
+copyright.innerHTML = `<strong>Sedigheh  &#169 ${date1} &#169</strong>` 
+footer.appendChild(copyright);
 const spanDelete = `<span class="delete">Remove</span>`;
 const spanEdit = `<span class="edit">Edit</span>`;
 
@@ -22,6 +36,38 @@ console.log(ul2);
  let messageSection = document.getElementById('list-message');
  let messageList = messageSection.querySelector('ul');
  messageSection.hidden =true;
+
+
+
+console.log(apiurl);
+ fetch(apiurl)
+ .then(response => {
+   if (!response.ok) {
+     throw new Error('Request failed');
+   }
+   return response.text(); // Parse the response as JSON
+ })
+ .then(data => {
+    const repositories = JSON.parse(data);  // Do something with the data
+    console.log(repositories);
+    projectSection.appendChild(projectList);
+    const i = 0;
+    for(let repository of repositories){
+
+          console.log(repository);
+          let project = document.createElement('li');
+          project.innerText = (repository.name);
+          projectList.appendChild(project);
+    
+  }
+ })
+ .catch(error => {
+   console.error('An error occurred:', error);
+ });
+
+ 
+
+
 
  document.querySelector('#message-form').addEventListener('submit' ,
    (event) => {
