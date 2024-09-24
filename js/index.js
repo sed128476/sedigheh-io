@@ -1,4 +1,4 @@
-const uname = "sed128476";
+let  uname = 'sed128476';
 const apiurl = `https://api.github.com/users/${uname}/repos`;
 const projectSection = document.getElementById('Projects');
 let   projectList    = document.createElement('ul');
@@ -75,6 +75,8 @@ console.log(apiurl);
           let email = event.target.usersEmail.value;
           let message = event.target.usersMessage.value;
           let objuser = { usersName: name, usersEmail: email, usersMessage: message};
+          const  li = document.createElement('li');
+          li.className = "li-list"; 
           console.log(objuser);
           const content1 = `<a href="mailto:${email} ">  ${name}  </a> wrote: ${message}  `;
           spanName.innerHTML = content1;
@@ -130,15 +132,20 @@ document.addEventListener('DOMContentLoaded', function(e){
 
 function storeToLocalStorage(task){
   console.log("task:" , task);
-  let tasks;
+  let tasks = [];
   if(localStorage.getItem('tasks') === null){
       tasks = [];
   } else {
       tasks = localStorage.getItem('tasks');
+      console.log("localtasks:", tasks );
+
     
   }
+  console.log("localtasks:", tasks , "localtask:", task);
 
   tasks.push(task);
+  console.log("localtasks:", tasks , "localtask:", task);
+
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
