@@ -1,4 +1,4 @@
-/*create fetch  */
+//create fetch  
 const username = "sed128476";
 const apiurl = `https://api.github.com/users/${username}/repos`;
 const projectSection = document.getElementById('Projects');
