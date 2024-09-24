@@ -1,4 +1,3 @@
-//create fetch  
 const username = "sed128476";
 const apiurl = `https://api.github.com/users/${username}/repos`;
 const projectSection = document.getElementById('Projects');
@@ -18,14 +17,14 @@ const spanEdit = `<span class="edit">Edit</span>`;
 
 
 
-const inputTextusername = document.querySelector('#userName');
-const inputTextuseremail = document.querySelector('#userEmail');
-const inputTextusermassage = document.querySelector('#usersMessage');
-const  li = document.createElement('li');
+// const inputTextusername = document.querySelector('#userName');
+// const inputTextuseremail = document.querySelector('#userEmail');
+// const inputTextusermassage = document.querySelector('#usersMessage');
+ const  li = document.createElement('li');
 li.className = "li-list";
 const spanName = document.createElement('span');
 spanName.className = 'name';
-console.log(inputTextuseremail);
+//console.log(inputTextuseremail);
 const checkBox = document.querySelector('#hide input');
 const ul2 = document.querySelector('#messages')
 console.log(ul2);
@@ -51,7 +50,7 @@ console.log(apiurl);
     const repositories = JSON.parse(data);  // Do something with the data
     console.log(repositories);
     projectSection.appendChild(projectList);
-    const i = 0;
+    //const i = 0;
     for(let repository of repositories){
 
           console.log(repository);
@@ -77,9 +76,8 @@ console.log(apiurl);
           let message = event.target.usersMessage.value;
           let objuser = { usersName: name, usersEmail: email, usersMessage: message};
           console.log(objuser);
-          const content1 = ` <a href="mailto:${email} ">  ${name}  </a> wrote: ${message}  `;
-          spanName.textContent = content1;
-          console.log(spanName);
+          const content1 = `<a href="mailto:${email} ">  ${name}  </a> wrote: ${message}  `;
+          spanName.innerHTML = content1;
           li.appendChild(spanName);
           li.innerHTML += spanDelete;
           ul2.appendChild(li);
@@ -106,18 +104,20 @@ checkBox.addEventListener('change', function(e){
 });
 
 
+
 document.addEventListener('DOMContentLoaded', function(e){
         let tasks;
         if(localStorage.getItem('tasks') === null){
             tasks = [];
         } else {
           tasks = localStorage.getItem('tasks');
+          console.log("tasks:" , tasks, "length:" , tasks.length);
           
         }
         
         for(let item of tasks){
-            const content1 = ` <a href="mailto:${item.email} ">  ${item.name}  </a>wrote: ${item.message}  `;
-            spanName.textContent = content1;
+            const content1 = ` <a href="mailto:${item.usersEmail} ">  ${item.usersName}  </a>wrote: ${item.usersMessagemessage}  `;
+            spanName.innerHTML = content1;
             li.appendChild(spanName);
             li.innerHTML += spanDelete;
             ul2.appendChild(li);
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function(e){
     
 
 function storeToLocalStorage(task){
-  console.log(task);
+  console.log("task:" , task);
   let tasks;
   if(localStorage.getItem('tasks') === null){
       tasks = [];
