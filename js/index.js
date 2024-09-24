@@ -1,5 +1,5 @@
-const username = "sed128476";
-const apiurl = `https://api.github.com/users/${username}/repos`;
+const uname = "sed128476";
+const apiurl = `https://api.github.com/users/${uname}/repos`;
 const projectSection = document.getElementById('Projects');
 let   projectList    = document.createElement('ul');
       projectList.className = 'project';
