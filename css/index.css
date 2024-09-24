@@ -171,6 +171,12 @@ img{
     margin-top: 3rem;
     margin-left: 1rem;
 }
+.li-list{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-between;
+}
 /*
 #Projects{
     background-color: #b7832f; 
