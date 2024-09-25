@@ -1,8 +1,8 @@
-let  uname = 'sed128476';
-const apiurl = `https://api.github.com/users/${uname}/repos`;
+const username = "sed128476";
+const apiurl = `https://api.github.com/users/${username}/repos`;
 const projectSection = document.getElementById('Projects');
 let   projectList    = document.createElement('ul');
-      projectList.className = 'project';
+projectList.className = 'project';
 const today  = new Date();
 const date1 = today.getFullYear();
 const footer = document.createElement('footer');
@@ -14,17 +14,10 @@ copyright.innerHTML = `<strong>Sedigheh  &#169 ${date1} &#169</strong>`
 footer.appendChild(copyright);
 const spanDelete = `<span class="delete">Remove</span>`;
 const spanEdit = `<span class="edit">Edit</span>`;
-
-
-
-// const inputTextusername = document.querySelector('#userName');
-// const inputTextuseremail = document.querySelector('#userEmail');
-// const inputTextusermassage = document.querySelector('#usersMessage');
- const  li = document.createElement('li');
+const  li = document.createElement('li');
 li.className = "li-list";
 const spanName = document.createElement('span');
 spanName.className = 'name';
-//console.log(inputTextuseremail);
 const checkBox = document.querySelector('#hide input');
 const ul2 = document.querySelector('#messages')
 console.log(ul2);
@@ -47,19 +40,23 @@ console.log(apiurl);
    return response.text(); // Parse the response as JSON
  })
  .then(data => {
-    const repositories = JSON.parse(data);  // Do something with the data
-    console.log(repositories);
-    projectSection.appendChild(projectList);
-    //const i = 0;
-    for(let repository of repositories){
-
-          console.log(repository);
-          let project = document.createElement('li');
-          project.innerText = (repository.name);
-          projectList.appendChild(project);
+            const repositories = JSON.parse(data);  // Do something with the data
+            console.log(repositories);
+            projectSection.appendChild(projectList);
+            console.log(repositories);
+            for (let repository  of repositories){
+                  console.log(repository);
+                  let project = document.createElement('li');
+                  let content2 = `<span class="rname"${repository.name}</span><span class="ad">Address:</span>${repository.html_url}<span class="ur">Created:</span>${repository.created_at}`;
+                  console.log(content2);
+                  project.innerHTML = content2;
+                  console.log(repository.html_url);
+                  console.log(repository.created_at);
+                  projectList.innerHTML += `<h3>${repository.name}</h3>`;
+                  projectList.appendChild(project);
     
-  }
- })
+          }
+    })
  .catch(error => {
    console.error('An error occurred:', error);
  });
@@ -88,7 +85,7 @@ console.log(apiurl);
           resultSubmit.reset();
           messageSection.hidden = false;
         
-});
+   });
 
 ul2.addEventListener('click', function(e){
   if(e.target.className === 'delete'){
