@@ -129,21 +129,25 @@ document.addEventListener('DOMContentLoaded', function(e){
 
 function storeToLocalStorage(task){
   console.log("task:" , task);
-  let tasks = [];
+  let tasks = new Array();
   if(localStorage.getItem('tasks') === null){
-      tasks = [];
+     // tasks = [];
+     console.log("localStorage  is empty" );
   } else {
       tasks = localStorage.getItem('tasks');
-      console.log("localtasks:", tasks );
+      console.log("localtasksElse:", tasks );
 
     
   }
-  console.log("localtasks:", tasks , "localtask:", task);
+  //console.log("localtasks:", tasks.length , "localtask:", task);
 
-  tasks.push(task);
-  console.log("localtasks:", tasks , "localtask:", task);
+  //tasks.push(task);
+  tasks.concat(task);
+  console.log("localtasks:", tasks.length , "localtaskAfterIf:", tasks);
+  
 
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  //localStorage.setItem('tasks', JSON.stringify(tasks));
+  localStorage.setItem('tasks', tasks);
 }
 
 function removeFromLocalStorage(task){
