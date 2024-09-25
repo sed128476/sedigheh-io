@@ -31,7 +31,7 @@ console.log(ul2);
 
 
 
-console.log(apiurl);
+
  fetch(apiurl)
  .then(response => {
    if (!response.ok) {
