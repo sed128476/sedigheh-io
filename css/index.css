@@ -115,10 +115,10 @@ img{
     text-align:left;
     color:#212614;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     padding: auto 0.8rem;
     margin-top: 3rem;
-    margin-left: 0.1rem;
+    margin-left: auto;
 }
 
 .message-section{
@@ -134,7 +134,7 @@ img{
 .key-submit{
     width: 50px;
     background-color:plum;
-    align-self:flex-end;
+    align-self:flex-start;
 }
 .key-submit:hover{
     background-color: blueviolet;
@@ -201,9 +201,11 @@ img{
 .project{
     background-color:azure;
     color: #333;
-    width: 20%;
+    width: 90%;
+    font-size: smaller;
     display: flex;
     flex-direction: column;
+    text-align: left;
     justify-content:space-around;
     border: burlywood solid  4px;
     padding: auto;
@@ -211,6 +213,24 @@ img{
     margin-left: 2rem;
 }
 
+.project li{
+    border: #9361bf solid 2px;
+    text-align: left;
+    padding: auto;
+    width: 95%;
+    margin-top: 0.2rem;
+    margin-left: 0;
+}
+.ad{
+    margin-left: 2rem;
+    width: 30%;
+}
+.ur{
+    padding: auto;
+    width: 30%;
+    margin-left: 2rem;
+
+}
 
 
 body {
