@@ -165,9 +165,9 @@ img{
     text-align:left;
     color:#212614;
     flex-direction: row;
-    width: 90%;
+    width: 60%;
     border: 3px solid;
-    padding: auto 0.8rem;
+    padding: auto 0.2rem;
     margin-top: 3rem;
     margin-left: 1rem;
 }
@@ -219,7 +219,7 @@ body {
       background:azure;
     }
   }
-  @media (min-width: 650px) {
+  @media (min-width: 550px) {
     body {
       background:lemonchiffon;
     }
