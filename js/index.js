@@ -47,7 +47,7 @@ console.log(ul2);
             for (let repository  of repositories){
                   console.log(repository);
                   let project = document.createElement('li');
-                  let content2 = `<span class="rname"${repository.name}</span><span class="ad">Address:</span>${repository.html_url}<span class="ur">Created:</span>${repository.created_at}`;
+                  let content2 = `<span class="ad"><a href="${repository.html_url}">${repository.name}</a></span> <span class="ur">Created:</span>${repository.created_at}`;
                   console.log(content2);
                   project.innerHTML = content2;
                   console.log(repository.html_url);
