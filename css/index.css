@@ -1,6 +1,6 @@
 body{
     font-size: 1.125rem;
-    color: #707070;
+    color: #333;
     margin: 0;
 }
 
@@ -30,7 +30,7 @@ nav a{
     background:#212614;
     color: ghostwhite;
     border:burlywood solid 0.5rem;
-    padding: auto 0.8rem;
+    padding: auto 2rem;
     margin-top: 1rem;
       
 }
@@ -140,14 +140,22 @@ img{
     background-color: blueviolet;
     color:#212614;
 }
-.delete{
+
+.delete , .edit , .exp-m {
     float: left;
     background: #9361bf;
     padding: 6px;
     border-radius: 4px;
+    margin-top: 1rem;
+    margin-left: 10px;
     cursor: pointer;
     color: white;
 }
+
+li .Email{
+    display: none; /* Hides the edit span */
+}
+
 
 #hide{
     padding: 20px 35px 20px 0;
@@ -165,9 +173,9 @@ img{
     text-align:left;
     color:#212614;
     flex-direction: row;
-    width: 90%;
+    width: 60%;
     border: 3px solid;
-    padding: auto 0.8rem;
+    padding: auto 0.2rem;
     margin-top: 3rem;
     margin-left: 1rem;
 }
@@ -179,57 +187,37 @@ img{
     margin-left: 7rem;
     margin-top: 6px;
 }
+.skillul{
+    color: #333;
+}
 
 .li-list{
     margin-top: 4rem;
 }
-/*
-#Projects{
-    background-color: #b7832f; 
-    color: #000;
-   display: flex;
-   flex-direction: column;
-   width: 40%;
-   border:khaki 3px solid ; 
-   padding: 0 6rem ;
-   margin-top: 3rem;
 
-}
 
-*/
-
-.project{
-    background-color:azure;
+.ulproject{
+    background-color:rgb(227, 245, 245);
     color: #333;
-    width: 90%;
+    width: 55%;
     font-size: smaller;
     display: flex;
     flex-direction: column;
     text-align: left;
     justify-content:space-around;
-    border: burlywood solid  4px;
-    padding: auto;
+    
     margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 0.1rem;
 }
 
 .project li{
-    border: #9361bf solid 2px;
     text-align: left;
-    padding: auto;
-    width: 95%;
     margin-top: 0.2rem;
     margin-left: 0;
 }
-.ad{
-    margin-left: 2rem;
-    width: 30%;
-}
-.ur{
-    padding: auto;
-    width: 30%;
-    margin-left: 2rem;
 
+.ur{
+    margin-left: 2rem;
 }
 
 
@@ -242,7 +230,7 @@ body {
       background:azure;
     }
   }
-  @media (min-width: 650px) {
+  @media (min-width: 550px) {
     body {
       background:lemonchiffon;
     }
