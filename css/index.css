@@ -1,6 +1,6 @@
 body{
     font-size: 1.125rem;
-    color: #707070;
+    color: #333;
     margin: 0;
 }
 
@@ -140,14 +140,22 @@ img{
     background-color: blueviolet;
     color:#212614;
 }
-.delete{
+
+.delete , .edit , .exp-m {
     float: left;
     background: #9361bf;
     padding: 6px;
     border-radius: 4px;
+    margin-top: 1rem;
+    margin-left: 10px;
     cursor: pointer;
     color: white;
 }
+
+li .Email{
+    display: none; /* Hides the edit span */
+}
+
 
 #hide{
     padding: 20px 35px 20px 0;
@@ -178,6 +186,9 @@ img{
     padding: 0.7rem;
     margin-left: 7rem;
     margin-top: 6px;
+}
+.skillul{
+    color: #333;
 }
 
 .li-list{
