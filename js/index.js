@@ -5,7 +5,7 @@ const footer = document.createElement('footer');
 const body = document.querySelector('body');
 body.appendChild(footer);
 const copyright = document.createElement('div')
-copyright.innerHTML = `<strong>Sedigheh  &#169 ${date1} &#169</strong>` 
+copyright.innerHTML = `<strong>Sedigheh  &#169 ${date1}</strong>` 
 footer.appendChild(copyright);
 // footer  end
 
@@ -39,9 +39,7 @@ messageSection.hidden =true;
  })
  .then(data => {
             const repositories = JSON.parse(data);  // Do something with the data
-            console.log(repositories);
             projectSection.appendChild(projectList);
-            console.log(repositories);
             for (let repository  of repositories){
                   let project = document.createElement('li');
                   let content2 = `<span class="ad"><a href="${repository.html_url}">${repository.name}</a></span> <span class="ur">Created:</span>${repository.created_at}`;
@@ -60,14 +58,15 @@ messageSection.hidden =true;
 document.querySelector('#message-form').addEventListener('submit' ,
    (event) => {
           event.preventDefault();
+          const  li = document.createElement('li');
+          li.className = "li-list";
           let name = event.target.usersName.value;
           let email = event.target.usersEmail.value;
           let message = event.target.usersMessage.value;
           let objuser = { usersName: name, usersEmail: email, usersMessage: message};
-          let content2 = `<span class="edit">Edit</span> <span class="delete">Remove</span> 
-                <span class="Email">${email}</span>
-                <span class="exp-m"> <a href="mailto:${email}">  ${name}  </a>
-                 wrote: ${message}</span> `;
+          let content2 = `<span class="edit">Edit</span> <span class="delete">Remove</span>
+                          <span class="Email">${email}</span><span class="exp-m"> <a href="mailto:${email}">
+                            ${name}  </a>wrote: ${message}</span> `;
           li.innerHTML = content2;
           ul2.appendChild(li);
           storeToLocalStorage(objuser);
@@ -202,17 +201,3 @@ function removeFromLocalStorage(task){
   }
 }
  
- 
- 
- 
-  
- 
- 
- 
- 
-  
- 
- 
- 
- 
-
